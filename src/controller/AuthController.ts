@@ -22,7 +22,11 @@ export class AuthController {
   }
 
   @Post("/users")
-  createOne(@EntityFromBody() user: User) {
+  createOne(
+    @EntityFromBody({ parse: true })
+    user: User
+  ) {
+    console.log(user);
     return this.userRepository.save(user);
   }
 

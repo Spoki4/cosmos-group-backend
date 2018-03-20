@@ -1,7 +1,10 @@
 import { Repository, getConnectionManager } from "typeorm";
 import { User } from "../entity/User";
-import { JsonController, Get } from "routing-controllers";
-import { EntityFromParam } from "typeorm-routing-controllers-extensions";
+import { JsonController, Get, Post } from "routing-controllers";
+import {
+  EntityFromParam,
+  EntityFromBody
+} from "typeorm-routing-controllers-extensions";
 
 @JsonController()
 export class AuthController {
@@ -16,6 +19,11 @@ export class AuthController {
   @Get("/users/:id")
   getOne(@EntityFromParam("id") user: User) {
     return user;
+  }
+
+  @Post("/users")
+  createOne(@EntityFromBody() user: User) {
+    return this.userRepository.save(user);
   }
 
   @Get("/users")

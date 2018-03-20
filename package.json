@@ -15,6 +15,7 @@
     "pg": "^7.4.1",
     "reflect-metadata": "^0.1.12",
     "routing-controllers": "^0.7.7",
+    "typedi": "^0.7.1",
     "typeorm": "^0.1.16",
     "typeorm-routing-controllers-extensions": "^0.1.0",
     "typescript": "^2.7.2"

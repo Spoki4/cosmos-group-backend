@@ -10,7 +10,7 @@ useContainer(Container);
 createConnection({
   type: "postgres",
   url: process.env.DATABASE_URL,
-  entities: [__dirname + "/entity/*.js"],
+  entities: [__dirname + "/entity/*.js", __dirname + "/entity/*.ts"],
   synchronize: true,
   logging: true
 })

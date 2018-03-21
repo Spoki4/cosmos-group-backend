@@ -1,5 +1,12 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToMany,
+  JoinColumn
+} from "typeorm";
 import { Exclude } from "class-transformer";
+import { Permission } from "./Permission";
 
 @Entity("users")
 export class User {
@@ -7,4 +14,7 @@ export class User {
 
   @Column() login: string;
   @Column() password: string;
+
+  @OneToMany(type => Permission, permission => permission.user)
+  permissions: Promise<Permission[]>;
 }

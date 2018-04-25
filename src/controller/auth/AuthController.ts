@@ -57,8 +57,7 @@ export class AuthController {
     return {
       token,
       user: {
-        login: user.login,
-        permissions: (await user.permissions) || []
+        login: user.login
       }
     };
   }

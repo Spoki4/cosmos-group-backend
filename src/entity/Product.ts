@@ -2,19 +2,19 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
-  OneToMany,
-  JoinColumn,
   CreateDateColumn,
   UpdateDateColumn
 } from "typeorm"
-import { Exclude } from "class-transformer"
 
-@Entity("users")
-export class User {
+@Entity("products")
+export class Product {
   @PrimaryGeneratedColumn() id: number
 
-  @Column() login: string
-  @Column() password: string
+  @Column() name: string
+  @Column() description: string
+  @Column() width: number
+  @Column() height: number
+  @Column() length: number
 
   @CreateDateColumn() createdDate: Date
   @UpdateDateColumn() updateDate: Date

@@ -1,11 +1,11 @@
-import { PrimaryColumn, OneToOne, Entity, JoinColumn } from "typeorm";
-import { User } from "./User";
+import { PrimaryColumn, OneToOne, Entity, JoinColumn } from "typeorm"
+import { User } from "./User"
 
 @Entity("tokens")
 export class Token {
-  @PrimaryColumn() token: string;
+  @PrimaryColumn() token: string
 
   @OneToOne(type => User)
   @JoinColumn()
-  user: Promise<User>;
+  user: Promise<User>
 }

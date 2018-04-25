@@ -10,7 +10,7 @@ services:
     ports: 
       - "5432:5432"
   app: 
-    image: 'node:8.9.1-alpine'
+    image: 'node:9.11.1-alpine'
     working_dir: /backend
     command: yarn dev
     volumes:

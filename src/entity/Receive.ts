@@ -1,20 +1,20 @@
 import {
   Entity,
   PrimaryGeneratedColumn,
-  Column,
-  OneToMany,
   JoinColumn,
+  OneToOne,
   CreateDateColumn,
   UpdateDateColumn
 } from "typeorm"
-import { Exclude } from "class-transformer"
+import { Product } from "./Product"
 
-@Entity("users")
-export class User {
+@Entity()
+export class Receive {
   @PrimaryGeneratedColumn() id: number
 
-  @Column() login: string
-  @Column() password: string
+  @OneToOne(type => Product)
+  @JoinColumn()
+  product: Promise<Product>
 
   @CreateDateColumn() createdDate: Date
   @UpdateDateColumn() updateDate: Date

@@ -15,6 +15,7 @@ export class User {
 
   @Column() login: string
   @Column() password: string
+  @Column() role: string
 
   @CreateDateColumn() createdDate: Date
   @UpdateDateColumn() updateDate: Date

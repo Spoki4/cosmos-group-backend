@@ -39,5 +39,9 @@
   "user": {
     "dataSource": "mongo",
     "public": true
+  },
+  "employee": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

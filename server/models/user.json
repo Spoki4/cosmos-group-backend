@@ -7,6 +7,9 @@
   },
   "restrictResetPasswordTokenScope": false,
   "emailVerificationRequired": false,
+  "hidden": [
+    "password"
+  ],
   "properties": {},
   "validations": [],
   "relations": {},
@@ -20,7 +23,7 @@
     {
       "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "admin",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     }
   ],

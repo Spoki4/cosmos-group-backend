@@ -18,4 +18,12 @@ module.exports = function(app) {
       }
     );
   });
+
+  app.get("/api/logout", function(req, res, next) {
+    if (!req.accessToken) return res.sendStatus(401); //return 401:unauthorized if accessToken is not present
+    app.models.user.logout(req.accessToken.id, function(err) {
+      if (err) return next(err);
+      res.end();
+    });
+  });
 };

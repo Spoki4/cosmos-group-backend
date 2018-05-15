@@ -43,5 +43,9 @@
   "employee": {
     "dataSource": "mongo",
     "public": true
+  },
+  "product": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

@@ -47,5 +47,9 @@
   "product": {
     "dataSource": "mongo",
     "public": true
+  },
+  "stock": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

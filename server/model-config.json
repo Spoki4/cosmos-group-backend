@@ -59,5 +59,9 @@
   "client": {
     "dataSource": "mongo",
     "public": true
+  },
+  "process": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

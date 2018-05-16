@@ -1,7 +1,7 @@
 'use strict';
 
 const {disableAllMethodsWithExceptions} = require('../utils/disableMethods');
-module.exports = function(Client) {
+module.exports = function(Process) {
 // Disable all methods except whitelist
   const whitelist = [
     'create',
@@ -10,5 +10,5 @@ module.exports = function(Client) {
     'prototype.patchAttributes',
     'deleteById',
   ];
-  disableAllMethodsWithExceptions(Client, whitelist);
+  // disableAllMethodsWithExceptions(Process, whitelist);
 };

@@ -34,6 +34,22 @@
         "nestRemoting": true
       }
     },
+    "supplier": {
+      "type": "belongsTo",
+      "model": "supplier",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "client": {
+      "type": "belongsTo",
+      "model": "client",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
     "stockEnter": {
       "type": "belongsTo",
       "model": "stock",
